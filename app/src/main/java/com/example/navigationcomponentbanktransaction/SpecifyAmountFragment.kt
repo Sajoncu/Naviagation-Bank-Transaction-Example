@@ -9,7 +9,7 @@ import android.view.ViewGroup
 /**
  * A simple [Fragment] subclass.
  */
-class SpecificAmountFragment : Fragment() {
+class SpecifyAmountFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
