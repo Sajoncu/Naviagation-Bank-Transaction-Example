@@ -9,7 +9,17 @@
         android:id="@+id/mainFragment"
         android:name="com.example.navigationcomponentbanktransaction.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_chooseRecipientFragment"
+            app:destination="@id/chooseRecipientFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewTransactionFragment"
+            app:destination="@id/viewTransactionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewTransactionFragment"
         android:name="com.example.navigationcomponentbanktransaction.ViewTransactionFragment"
@@ -19,7 +29,11 @@
         android:id="@+id/chooseRecipientFragment"
         android:name="com.example.navigationcomponentbanktransaction.ChooseRecipientFragment"
         android:label="fragment_choose_recipient"
-        tools:layout="@layout/fragment_choose_recipient" />
+        tools:layout="@layout/fragment_choose_recipient" >
+        <action
+            android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
+            app:destination="@id/specifyAmountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
         android:name="com.example.navigationcomponentbanktransaction.ViewBalanceFragment"
@@ -29,7 +43,11 @@
         android:id="@+id/specifyAmountFragment"
         android:name="com.example.navigationcomponentbanktransaction.SpecifyAmountFragment"
         android:label="fragment_specific_amount"
-        tools:layout="@layout/fragment_specific_amount" />
+        tools:layout="@layout/fragment_specific_amount" >
+        <action
+            android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
         android:name="com.example.navigationcomponentbanktransaction.ConfirmationFragment"
