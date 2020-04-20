@@ -47,10 +47,22 @@
         <action
             android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
             app:destination="@id/confirmationFragment" />
+        <argument
+            android:name="recipient"
+            app:argType="string"
+            android:defaultValue="None" />
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
         android:name="com.example.navigationcomponentbanktransaction.ConfirmationFragment"
         android:label="fragment_confirmation"
-        tools:layout="@layout/fragment_confirmation" />
+        tools:layout="@layout/fragment_confirmation" >
+        <argument
+            android:name="amount"
+            app:argType="com.example.navigationcomponentbanktransaction.Money" />
+        <argument
+            android:name="recipient"
+            app:argType="string"
+            android:defaultValue="None" />
+    </fragment>
 </navigation>
